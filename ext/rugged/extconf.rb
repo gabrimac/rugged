@@ -61,7 +61,7 @@ if arg_config("--use-system-libraries", !!ENV['RUGGED_USE_SYSTEM_LIBRARIES'])
   try_compile(<<-SRC) or abort "libgit2 version is not compatible, expected ~> #{major}.#{minor}.0"
 #include <git2/version.h>
 
-#if LIBGIT2_VER_MAJOR != #{major} || LIBGIT2_VER_MINOR != #{minor}
+#if 1 != 0
 #error libgit2 version is not compatible
 #endif
   SRC
